@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.adjutant.memory-maintenance</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>-lc</string>
+        <string>$HOME/adjutant/scripts/run-with-lock.sh memory-maintenance -p "Memory maintenance. Review all files in knowledge/. Remove duplicates, archive anything resolved to archive/$(date +%Y-%m)/. Ensure open-loops.md has no resolved items. Prune queue.md to under 50 lines, archiving overflow. Check all knowledge files — if any exceed 100 lines, split or summarise old sections." --allowedTools "Read,Write,Edit,Glob,Grep,Bash" --model haiku --max-turns 20</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>$HOME/adjutant</string>
+    <key>StartInterval</key>
+    <integer>21600</integer>
+    <key>StandardOutPath</key>
+    <string>$HOME/adjutant/logs/memory-maintenance.log</string>
+    <key>StandardErrorPath</key>
+    <string>$HOME/adjutant/logs/memory-maintenance.err</string>
+</dict>
+</plist>

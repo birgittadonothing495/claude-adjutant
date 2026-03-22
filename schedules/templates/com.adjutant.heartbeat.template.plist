@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.adjutant.heartbeat</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>-lc</string>
+        <string>$HOME/adjutant/scripts/run-with-lock.sh heartbeat -p "$(cat $HOME/adjutant/heartbeat.md)" --allowedTools "Read,Write,Edit,Glob,Grep,Bash,WebSearch,WebFetch,Agent" --model sonnet --max-turns 30</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>$HOME/adjutant</string>
+    <key>StartInterval</key>
+    <integer>1800</integer>
+    <key>StandardOutPath</key>
+    <string>$HOME/adjutant/logs/heartbeat.log</string>
+    <key>StandardErrorPath</key>
+    <string>$HOME/adjutant/logs/heartbeat.err</string>
+</dict>
+</plist>

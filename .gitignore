@@ -1,0 +1,17 @@
+logs/
+.claude/settings.local.json
+.mcp.json
+knowledge/chris.md
+knowledge/contacts/
+archive/
+inbox/*
+!inbox/.gitkeep
+outbox/*
+!outbox/.gitkeep
+schedules/*.plist
+locks/
+.claude/specs/
+.claude/checkpoints/
+.claude/scheduled_tasks.lock
+*.env
+.DS_Store

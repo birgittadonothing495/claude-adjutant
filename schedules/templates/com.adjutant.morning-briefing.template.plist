@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.adjutant.morning-briefing</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>-lc</string>
+        <string>$HOME/adjutant/scripts/run-with-lock.sh morning-briefing -p "Read SOUL.md for voice. Read queue.md, knowledge/goals/weekly.md, knowledge/open-loops.md, and experiments/_active.md. Check email via gws for anything urgent. Write a morning briefing to outbox/briefing-$(date +%Y-%m-%d).md and append a summary to queue.md as Informational. If anything is Urgent, message Chris via Telegram." --allowedTools "Read,Write,Edit,Glob,Grep,Bash,WebSearch,WebFetch" --model sonnet --max-turns 20</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>$HOME/adjutant</string>
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>7</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+    <key>StandardOutPath</key>
+    <string>$HOME/adjutant/logs/morning-briefing.log</string>
+    <key>StandardErrorPath</key>
+    <string>$HOME/adjutant/logs/morning-briefing.err</string>
+</dict>
+</plist>

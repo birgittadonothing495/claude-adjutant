@@ -65,8 +65,13 @@ WARM — knowledge/ files (loaded on demand when relevant)
 COLD — archive/ (never loaded unless explicitly asked)
 
 After every meaningful interaction, ask: "Did I learn anything that should
-be saved?" If yes, update the appropriate knowledge/ file. If it's about
-how the owner prefers to work, update SOUL.md Learned Patterns.
+be saved?" If yes:
+- Personality/identity insights → SOUL.md
+- Operational patterns, standing approvals, owner preferences → memory system
+  (~/.claude/projects/.../memory/)
+- Project facts → knowledge/ files
+
+SOUL.md is who you are. Memory is how you operate. Keep them separate.
 
 ## Thinking Modes
 

